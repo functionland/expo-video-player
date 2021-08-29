@@ -233,6 +233,16 @@ const VideoPlayer = (tempProps) => {
         {props.timeVisible && (<Text style={[props.textStyle, styles.timeRight]}>
             {getMinutesSecondsFromMilliseconds(playbackInstanceInfo.duration)}
           </Text>)}
+		{props.mute.visible && (<TouchableButton onPress={() => props.mute.isMute
+                ? props.mute.exitMute()
+                : props.mute.enterMute()}>
+            <View>
+              {props.icon.mute}
+              {props.icon.exitMute}
+              {((!props.icon.mute && props.mute.isMute) ||
+                (!props.icon.exitMute && !props.mute.isMute)) && (<MaterialIcons name={props.mute.isMute ? 'volume-up' : 'volume-off'} style={props.icon.style} size={props.icon.size / 2} color={props.icon.color}/>)}
+            </View>
+          </TouchableButton>)}
         {props.fullscreen.visible && (<TouchableButton onPress={() => props.fullscreen.inFullscreen
                 ? props.fullscreen.exitFullscreen()
                 : props.fullscreen.enterFullscreen()}>

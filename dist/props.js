@@ -34,6 +34,16 @@ export const defaultProps = {
             padding: 2,
         },
     },
+	mute: {
+        enterMute: () => 
+        // eslint-disable-next-line no-console
+        console.log('[VideoPlayer] - missing `enterMute` function in `mute` prop'),
+        exitMute: () => 
+        // eslint-disable-next-line no-console
+        console.log('[VideoPlayer] - missing `exitMute` function in `mute` prop'),
+        isMute: false,
+        visible: true,
+    },
     fullscreen: {
         enterFullscreen: () => 
         // eslint-disable-next-line no-console
