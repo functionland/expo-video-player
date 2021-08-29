@@ -11,7 +11,7 @@ const App = () => {
   const refVideo = useRef(null)
   const refVideo2 = useRef(null)
   const refScrollView = useRef(null)
-
+  const [isMute, setIsMute] = useState(false)
   return (
     <ScrollView
       scrollEnabled={!inFullscreen2}
@@ -136,6 +136,7 @@ const App = () => {
       <VideoPlayer
         videoProps={{
           shouldPlay: false,
+		  isMuted: isMute,
           resizeMode: Video.RESIZE_MODE_CONTAIN,
           source: {
             uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
@@ -156,6 +157,15 @@ const App = () => {
             })
           },
           inFullscreen,
+        }}
+		mute={{
+          enterMute: () => {
+            setIsMute(!isMute)
+          },
+          exitMute: () => {
+            setIsMute(!isMute)
+          },
+          isMute: isMute,
         }}
         style={{ height: 160 }}
       />
