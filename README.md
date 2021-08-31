@@ -47,7 +47,7 @@ Property | Type | Description
 **animation** | `{ fadeInDuration?: number, fadeOutDuration?: number }` | Duration of animations in milliseconds
 **style** | `{ width?: number, height?: number, videoBackgroundColor?: ColorValue, controlsBackgroundColor?: ColorValue }` | Basic styling of `<VideoPlayer />`
 **icon** | `{ size?: number, color?: ColorValue, style?: TextStyle, pause?: JSX.Element, play?: JSX.Element, replay?: JSX.Element, mute?: JSX.Element, exitMute?: JSX.Element, fullscreen?: JSX.Element, exitFullscreen?: JSX.Element }` | Icon styling. Check more in the [example-app](https://github.com/ihmpavel/expo-video-player/blob/master/example-app/App.tsx)
-**mute** | `{ enterMute?: () => void, exitMute?: () => void, isMute?: boolean, visible?: boolean }` | Usage of `mute` mode is in the [example-app](blob/master/example-app/App.tsx#L154)
+**mute** | `{ enterMute?: () => void, exitMute?: () => void, isMute?: boolean, visible?: boolean }` | Usage of `mute` mode is in the [example-app](example-app/App.tsx#L154)
 **fullscreen** | `{ enterFullscreen?: () => void, exitFullscreen?: () => void, inFullscreen?: boolean, visible?: boolean }` | Usage of `Fullscreen` mode is in the [example-app](https://github.com/ihmpavel/expo-video-player/blob/master/example-app/App.tsx#L154)
 
 ## Compatibility
